@@ -1,13 +1,15 @@
-# Refactor VBA code and measure performance**
-Purpose: Refactoring a stock analysis code to determine the type of stocks are worth investing into from the years 2017 and 2018. Code was refactored to ensure it ran faster while porviding accurate 'return' infomation on each stock. 
-Dataset: Lists of 12 different stocks was provided in 2 separate sheets denoted by year "2017" and "2018".
+# Refactor VBA code and measure performance
+**Purpose**: Refactoring a stock analysis code to determine the type of stocks are worth investing into from the years "2017" and "2018". Code was refactored to ensure it ran faster while porviding accurate 'return' infomation on each stock. 
+**Dataset:** Lists of 12 different stocks was provided in 2 separate sheets denoted by year "2017" and "2018".
 Analysis:
 Prior to refactoring the code, the code was copied from 'green_Stocks' file where first few lines of the code acted as the basis for the code:
-startTime and endTime were intialized at the beginning to capture the time it took for the code to run on both '2017' and '2018' datasheets. 
-Sub AllStocksAnalysisRefactored()
+
+
+
+    startTime and endTime were intialized at the beginning to capture the time it took for the code to run on both '2017' and '2018' datasheets. 
+	Sub AllStocksAnalysisRefactored()
     Dim startTime As Single
     Dim endTime  As Single
-
     yearValue = InputBox("What year would you like to run the analysis on?")
 
     startTime = Timer
@@ -43,9 +45,10 @@ Sub AllStocksAnalysisRefactored()
     
     'Get the number of rows to loop over
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-  The code was refactored in the following manner:
+ 
+ The code was refactored in the following manner:
 	
-  ''1a) Create a ticker Index
+  	''1a) Created a ticker Index
     tickerIndex = 0
 
     '1b) Create three output arrays
@@ -138,16 +141,16 @@ Sub AllStocksAnalysisRefactored()
 End Sub
 
 **PROS and CONS of refactoring the code**
-Rfeactoring the code made it more user-friendly to read and understand for the users. It also improves debugging, increases processing speed and enhances programming speed. While, the advantages of refactoring the code are present, it also requires developers with enough skills to be able to refactor a code for improved efficiency. In fact, in situations, where systems are integrating and scripts are running through millions of data-points, it may get very cumbersome to re-factor a code. Overall, involves immense amount of time and resources. 
+Refeactoring the code made it more user-friendly to read and understand for the users. It also improved debugging, increased processing speed and enhanced programming speed. While, the advantages of refactoring the code were present, it also means that institutions would need skilled developers to refactor a code for improved efficiency. In fact, in  certain situations, where systems are integrating and scripts and are running through millions of data-points, it may get very cumbersome to re-factor a code. Overall, involves immense amount of time and resources. 
 
-Advantages of refactoring stock analysis code:
+**Advantages of refactoring stock analysis code:**
 As mentioned earlier, one of the biggest advantages of refactoring a code is faster script running times which was apparent in our sotcks analysis.
 The script run time reduces with each run as apparent between '2017' and '2018' run times. 
 
 <img width="1437" alt="Screen Shot 2021-09-27 at 11 41 06 AM" src="https://user-images.githubusercontent.com/90429568/134940766-c93a78b9-cefd-4636-b356-5d90d92da686.png">
 
     
-    <img width="1437" alt="Screen Shot 2021-09-27 at 11 42 27 AM" src="https://user-images.githubusercontent.com/90429568/134940987-56e2f3d4-c17b-46a5-a876-f846d47c64c0.png">
+   <img width="1437" alt="Screen Shot 2021-09-27 at 11 42 27 AM" src="https://user-images.githubusercontent.com/90429568/134940987-56e2f3d4-c17b-46a5-a876-f846d47c64c0.png">
 
 Additionally, the script had explanatory statements for each line of the code, enabling the reader to understand on how the code works (denoted by the green statements in the script). 
 <img width="1437" alt="Screen Shot 2021-09-27 at 11 43 47 AM" src="https://user-images.githubusercontent.com/90429568/134941205-e7da767a-2f94-43e1-8d8b-8e4cd2d2e617.png">
