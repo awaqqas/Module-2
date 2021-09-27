@@ -1,6 +1,4 @@
-# Module-2
-Module 2 asisgnment with 2 deliverables
-**Deliverable 1- Refactor VBA code and measure performance**
+# Refactor VBA code and measure performance**
 Purpose: Refactoring a stock analysis code to determine the type of stocks are worth investing into from the years 2017 and 2018. Code was refactored to ensure it ran faster while porviding accurate 'return' infomation on each stock. 
 Dataset: Lists of 12 different stocks was provided in 2 separate sheets denoted by year "2017" and "2018".
 Analysis:
